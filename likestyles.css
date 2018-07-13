@@ -1,0 +1,37 @@
+#like_button {
+  font-size: 1em;
+  color: #FFF;
+  cursor: pointer;
+  background-color: #41bf8b;
+  border: none;
+  padding: 0.4em 1em;
+  border-radius: 0.4em;
+  margin: auto;
+  display: block;
+  position: fixed;
+  right: 16px;
+  bottom: 48px;
+}
+
+#like_button:hover {
+  background-color: #288e64;
+}
+
+#clear_button {
+  font-size: 1em;
+  color: #FFF;
+  cursor: pointer;
+  background-color: #41bf8b;
+  border: none;
+  padding: 0.4em 1em;
+  border-radius: 0.4em;
+  margin: auto;
+  display: block;
+  position: fixed;
+  right: 16px;
+  bottom: 96px;
+}
+
+#clear_button:hover {
+  background-color: #288e64;
+}

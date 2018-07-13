@@ -3,7 +3,6 @@
   "name": "Scrapbox-likecast",
   "version": "1.0.0",
 
-  "default_locale": "ja_JP",
   "description": "Scrapboxにいいねボタンを追加する拡張",
   "icons": {
     "16": "icon16.png",
