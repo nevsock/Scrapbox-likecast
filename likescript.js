@@ -1,3 +1,4 @@
+//URL読み込み
 let url = location.href
 
 //新しくURLに紐づけされたカウントを設定する
