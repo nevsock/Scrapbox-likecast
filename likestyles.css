@@ -1,4 +1,4 @@
-#like_button {
+#plus_button {
   font-size: 1em;
   color: #FFF;
   cursor: pointer;
@@ -7,15 +7,16 @@
   padding: 0.4em 1em;
   border-radius: 0.4em;
   margin: auto;
-  display: block;
-  position: fixed;
-  right: 16px;
-  bottom: 48px;
+  display: inline-block;
   outline: none;
 }
 
-#like_button:hover {
+#plus_button:hover {
   background-color: #288e64;
+}
+
+#textbox {
+  display: inline-block;
 }
 
 #clear_button {
@@ -28,12 +29,16 @@
   border-radius: 0.4em;
   margin: auto;
   display: block;
-  position: fixed;
-  right: 16px;
-  bottom: 96px;
   outline: none;
 }
 
-#clear_button:hover {
+#plus_button:hover {
   background-color: #288e64;
+}
+
+#frame {
+  position: fixed;
+  right: 16px;
+  bottom: 48px;
+  width: 120px;
 }
