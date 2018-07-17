@@ -3,18 +3,6 @@ let url = location.href
 let frame = document.body.appendChild(document.createElement('div'))
 frame.id = 'frame'
 
-//リアクションをロード
-const loadReaction = function() {
-  if(localStorage.getItem(url)){
-    let data = JSON.parse(localStorage.getItem(url))
-    for(let i=0; i<data.length; i++){
-      let reaction = document.appendChild(document.createElement('p'))
-      reaction.className = 'reactions'
-      reaction.innerHTML = data[i].content
-    }
-  }
-}
-
 //ボタン作成・frameに追加
 let clearButton = frame.appendChild(document.createElement('button'))
 let reactionViewer = frame.appendChild(document.createElement('div'))
@@ -30,15 +18,32 @@ textBox.id = 'textbox'
 clearButton.innerHTML = 'clear'
 plusButton.innerHTML = '+'
 
-//いいねボタンを押した時の挙動
+//リアクションをロード
+const loadReaction = function() {
+  const reaction_viewer_ = document.getElementById('reaction_viewer')
+  while(reaction_viewer_.firstChild){
+    reaction_viewer_.removeChild(reaction_viewer_.firstChild)
+  }
+  if(localStorage.getItem(url)){
+    let data = JSON.parse(localStorage.getItem(url))
+    for(let i=0; i<data.length; i++){
+      let reaction = document.getElementById('reaction_viewer').appendChild(document.createElement('p'))
+      reaction.className = 'reactions'
+      reaction.innerHTML = data[i].reaction
+    }
+  }
+}
+
+//プラスボタンを押した時の挙動
 const plusReaction = function() {
-  let content = document.getElementById('textBox').value
-  let addData = { reaction : string(content), count : 0 }
+  let content = document.getElementById('textbox').value
+  let addData = { reaction : content, count : 0 }
   if(!localStorage.getItem(url)){
-    let data = new Array()
+    let data = []
     localStorage.setItem(url, JSON.stringify(data.push(addData)))
   } else {  
-    let data = JSON.parse(localStorage.getItem(url)).push(addData)
+    let data = JSON.parse(localStorage.getItem(url))
+    data.push(addData)
     localStorage.setItem(url, JSON.stringify(data))
   }
   loadReaction()

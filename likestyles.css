@@ -4,10 +4,11 @@
   cursor: pointer;
   background-color: #41bf8b;
   border: none;
-  padding: 0.4em 1em;
   border-radius: 0.4em;
-  margin: auto;
-  display: inline-block;
+  height: 32px;
+  width: 32px;
+  float: right;
+  display: block;
   outline: none;
 }
 
@@ -17,6 +18,14 @@
 
 #textbox {
   display: inline-block;
+  height: 32px;
+  width: calc(100% - 32px - 0.4em);
+  border-radius: 0.4em;
+  border: none;
+  float: left;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  outline: none;
 }
 
 #clear_button {
@@ -25,20 +34,54 @@
   cursor: pointer;
   background-color: #41bf8b;
   border: none;
-  padding: 0.4em 1em;
-  border-radius: 0.4em;
-  margin: auto;
+  padding: 0.4em;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  width: 100%;
   display: block;
   outline: none;
 }
 
-#plus_button:hover {
+#clear_button:hover {
   background-color: #288e64;
+}
+
+#reaction_viewer {
+  margin: 12px 8px;
+  max-height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#reaction_viewer::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+#reaction_viewer::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+.reactions {
+  font-size: 1em;
+  color: #FFF;
+  cursor: pointer;
+  background-color: #41bf8b;
+  border: none;
+  border-radius: 0.4em;
+  padding: 0.4em;
+  margin-left: auto;
+  right: 0.4em;
+  display: block;
+  outline: none;
+  word-wrap: break-word;
 }
 
 #frame {
   position: fixed;
   right: 16px;
   bottom: 48px;
-  width: 120px;
+  width: 180px;
+  padding: 0.4em;
+  background-color: #288e64;
+  border-radius: 0.6em;
 }
