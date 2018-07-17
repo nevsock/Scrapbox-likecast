@@ -1,4 +1,4 @@
-//URL読み込み
+//URL読み込みする
 let url = location.href
 let frame = document.body.appendChild(document.createElement('div'))
 frame.id = 'frame'
