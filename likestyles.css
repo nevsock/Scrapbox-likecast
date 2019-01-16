@@ -13,6 +13,9 @@
   margin-bottom: 0.4em;
   display: block;
   outline: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 #plus_button:hover {
@@ -26,7 +29,6 @@
   border-top-left-radius: 0.4em;
   border-bottom-left-radius: 0.4em;
   border: none;
-  float: left;
   padding-left: 0.4em;
   padding-right: 0.4em;
   margin-left: 0.4em;
@@ -36,20 +38,22 @@
 
 #clear_button {
   font-size: 1em;
-  color: #FFF;
+  color: #212121;
   cursor: pointer;
-  background-color: #41bf8b;
+  background-color: #bbbbbb;
   border: none;
   padding: 0.4em;
   border-top-left-radius: 0.4em;
-  border-top-right-radius: 0.4em;
   width: 100%;
   display: block;
   outline: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 #clear_button:hover {
-  background-color: #288e64;
+  background-color: #888888;
 }
 
 #reaction_viewer {
@@ -59,19 +63,11 @@
   overflow-x: hidden;
 }
 
-#reaction_viewer::-webkit-scrollbar {
-  width: 0.2em;
-}
-
-#reaction_viewer::-webkit-scrollbar-track-piece {
-  display: none;
-}
-
 .reactions {
   font-size: 1em;
-  color: #FFF;
+  color: #212121;
   cursor: pointer;
-  background-color: #41bf8b;
+  background-color: white;
   border: none;
   border-radius: 0.4em;
   padding: 0.4em;
@@ -82,11 +78,50 @@
   word-wrap: break-word;
 }
 
+.reactions:hover {
+}
+
+.good_button {
+  display: block;
+  height: 1em;
+  width: 1em;
+  margin: 0.3em;
+  border-radius: 0.5em;
+  border: #212121 0.05em solid;
+  background-color: #8cabff;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.good_button:hover {
+  background-color: #0044ff;
+}
+
+.bad_button {
+  display: block;
+  height: 1em;
+  width: 1em;
+  margin: 0.3em;
+  margin-left: 1.6em;
+  border-radius: 0.5em;
+  border: #212121 0.05em solid;
+  background-color: #ffb29a;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.bad_button:hover {
+  background-color: #e43d0a;
+}
+
 #frame {
   position: fixed;
-  right: 16px;
-  bottom: 48px;
-  width: 180px;
-  background-color: #288e64;
-  border-radius: 0.6em;
+  right: 0;
+  bottom: 24px;
+  width: 240px;
+  background-color: #eeeeee;
+  border-bottom-left-radius: 0.6em;
+  border-top-left-radius: 0.6em;
+  transform: translate(0, 0);
 }
+
